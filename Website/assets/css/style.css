@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+/* Basic Css */
+html, body, div, span, a, h1, h2, h3, h4, h5, h6, p, blockquote, img,
+ol, ul, li, input, label, select, table, tbody, tfoot, thead, tr, th,
+td, footer, header, menu, nav, section, video {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+}
+body {
+    font-family:'Roboto', sans-serif;
+    background-color:#2e3135;
+    color:#b6b6b6;
+    font-size:15px;
+    font-weight:400;
+    line-height:30px;
+    user-select: none;
+}
+a {
+    text-decoration:none;
+    color:#b6b6b6;
+}
+a:hover {
+    color:#000000;
+    text-decoration:none;
+}
+a:hover:not(.btn), .btn-link,.navigation .navbar-nav .nav-item:hover .nav-link,.navigation .navbar-nav .nav-item .nav-link.active,.cd-headline.clip .cd-words-wrapper, .section-title h1 span,
+.banner-section .banner-text h3.headline b, .about-text h4 span, .counter-box h3,.service .card-icon,.testimonial-name,.meta-action .fa,.contact .card-body .card-icon i,
+.contact .card-body .social-links a:hover, .breadcrumb .breadcrumb-item.active, .not-found-page .animate-ziro, h4 { color:#ffd31d !important; }
+
+/*----------------------------------------
+* Header Section
+*----------------------------------------*/
+.site-header {
+    font-family:'Poppins', sans-serif;
+    -webkit-transition:all 0.5s ease-in-out;
+    transition:all 0.5s ease-in-out;
+    background-color: #26282b;
+}
+.site-header .logo .text-logo {
+    position: relative;
+    color: #fafafa !important;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+.site-header .sticky-header .logo .text-logo {
+    color: #fafafa !important;
+}
+.site-header .sticky-header .navigation .navbar-nav .nav-item .nav-link {
+    color: #fafafa;
+}
+
+/*----------------------------------------
+* Navigation Menu
+*----------------------------------------*/
+.navigation .navbar-nav .nav-item {
+    position:relative;
+    padding:0 0 0 10px;
+}
+.navigation .navbar-nav .nav-item .nav-link {
+    color:#fafafa;
+    text-transform:uppercase;
+    font-size:14px;
+    font-weight:500;
+    padding:20px 10px;
+    letter-spacing:0.5px;
+    position:relative;
+    display:block;
+    background:transparent;
+}
+.navigation .navbar-nav .nav-item .nav-link i {
+    margin-right:10px;
+    position:relative;
+}
+
+/*----------------------------------------
+* Banner Section
+*----------------------------------------*/
+.banner-section {
+    padding: 120px 0;
+}
+
+/*----------------------------------------
+* Input Section
+*----------------------------------------*/
+input{
+	border-radius: 5px;
+	background-color:#2e3135;
+	color: #fff;
+	border-color: #fff;
+	width: 100%;
+	border: 1px #fff solid;
+	margin-bottom: 1em;
+}
+textarea{
+	height: 10em;
+	border-radius: 5px;
+	background-color:#2e3135;
+	color: #fff;
+	border-color: #fff;
+	width: 100%;
+	border: 1px #fff solid;
+	margin-bottom: 1em;
+}
+
+/*----------------------------------------
+* Responsive
+*----------------------------------------*/
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
