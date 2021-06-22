@@ -1,0 +1,89 @@
+if(moveout == 1){
+    if point_distance(x, y, 384, 160) > 1{
+        mp_potential_step(384, 160, 7, false);
+    }else{
+        //show_message("ok");
+        vspeed = 0;
+        canmove = 1;
+        moveout = 0;
+        hspeed = 5;
+    } 
+}
+if(canmove == 1){
+    if(direction == 0){
+        checkX = x+16;
+        checkY = y+16;
+        while(true){ 
+            checkX = checkX + 32;
+            if(checkX >= 833){break;}
+            if (position_meeting(checkX, checkY, all)){
+                inst = instance_position(checkX, checkY, ch_Player);
+                if(inst != noone){
+                    //show_message("work");
+                    if(inst == 100442){
+                        speed = 9;
+                    }
+                    break;
+                }
+            }
+            
+        }
+    }
+    if(direction == 90){
+        checkX = x+16;
+        checkY = y+16;
+        while(true){ 
+            checkY = checkY - 32;
+            if(checkY <= 0){break;}
+            if (position_meeting(checkX, checkY, all)){
+                inst = instance_position(checkX, checkY, ch_Player);
+                if(inst != noone){
+                    //show_message("work");
+                    if(inst == 100442){
+                        speed = 9;
+                    }
+                    break;
+                }
+            }
+            
+        }
+    }
+    if(direction == 180){
+        checkX = x+16;
+        checkY = y+16;
+        while(true){ 
+            checkX = checkX - 32;
+            if(checkX <= 0){break;}
+            if (position_meeting(checkX, checkY, all)){
+                inst = instance_position(checkX, checkY, ch_Player);
+                if(inst != noone){
+                    //show_message("work");
+                    if(inst == 100442){
+                        speed = 9;
+                    }
+                    break;
+                }
+            }
+            
+        }
+    }
+    if(direction == 270){
+        checkX = x+16;
+        checkY = y+16;
+        while(true){ 
+            checkY = checkY + 32;
+            if(checkY >= 480){break;}
+            if (position_meeting(checkX, checkY, all)){
+                inst = instance_position(checkX, checkY, ch_Player);
+                if(inst != noone){
+                    //show_message("work");
+                    if(inst == 100442){
+                        speed = 9;
+                    }
+                    break;
+                }
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,28 @@
+if(moveout == 1){
+    if point_distance(x, y, 416, 160) > 5{
+        mp_potential_step(416, 160, 7, false);
+    }else{
+        speed = 0;
+        canmove = 1;
+        moveout = 0;
+    } 
+}
+if(canmove == 1){
+    grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
+    path = path_add;
+    mp_grid_add_instances(grid,obj_wall_start,false);
+    mp_grid_add_instances(grid,obj_wall_single,false);
+    mp_grid_add_instances(grid,obj_wall_between,false);
+    mp_grid_add_instances(grid,obj_wall_between_up,false);
+    mp_grid_add_instances(grid,obj_wall_turn_downleft,false);
+    mp_grid_add_instances(grid,obj_wall_turn_topleft,false);
+    mp_grid_add_instances(grid,obj_wall_trun_topright,false);
+    mp_grid_add_instances(grid,obj_wall_turn_downright,false);
+    mp_grid_add_instances(grid,obj_wall_end_up,false);
+    mp_grid_add_instances(grid,obj_wall_end,false);
+    mp_grid_add_instances(grid,obj_wall_start_up,false);
+    mp_grid_add_instances(grid,obj_door,false);
+    mp_grid_path(grid,path,x,y,ch_Player.x,ch_Player.y,false);
+    path_start(path,3,"",1)
+}
+
